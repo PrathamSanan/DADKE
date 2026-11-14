@@ -1134,7 +1134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 setMobileMenu(false);
 
-                closeLightbox();
+                // closeLightbox();
 
                 closeRSVP();
 
@@ -1408,243 +1408,242 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =====================================================
        LIGHTBOX
     ===================================================== */
+    // const galleryItems =
+    //     $$(".gallery-item");
 
-    const galleryItems =
-        $$(".gallery-item");
+    // const lightbox =
+    //     $("#lightbox");
 
-    const lightbox =
-        $("#lightbox");
+    // const lightboxImage =
+    //     $("#lightboxImage");
 
-    const lightboxImage =
-        $("#lightboxImage");
+    // const lightboxClose =
+    //     $("#lightboxClose");
 
-    const lightboxClose =
-        $("#lightboxClose");
+    // const lightboxPrev =
+    //     $("#lightboxPrev");
 
-    const lightboxPrev =
-        $("#lightboxPrev");
+    // const lightboxNext =
+    //     $("#lightboxNext");
 
-    const lightboxNext =
-        $("#lightboxNext");
 
+    // let currentPhoto = 0;
 
-    let currentPhoto = 0;
 
+    // const galleryPhotos =
+    //     galleryItems.map(
+    //         (item) => {
 
-    const galleryPhotos =
-        galleryItems.map(
-            (item) => {
+    //             const image =
+    //                 item.querySelector(
+    //                     "img"
+    //                 );
 
-                const image =
-                    item.querySelector(
-                        "img"
-                    );
+    //             return (
+    //                 item.dataset.photo ||
+    //                 image?.getAttribute(
+    //                     "src"
+    //                 ) ||
+    //                 ""
+    //             );
 
-                return (
-                    item.dataset.photo ||
-                    image?.getAttribute(
-                        "src"
-                    ) ||
-                    ""
-                );
+    //         }
+    //     );
 
-            }
-        );
 
+    // function openLightbox(index) {
 
-    function openLightbox(index) {
+    //     if (
+    //         !lightbox ||
+    //         !lightboxImage ||
+    //         !galleryPhotos.length
+    //     ) return;
 
-        if (
-            !lightbox ||
-            !lightboxImage ||
-            !galleryPhotos.length
-        ) return;
 
+    //     currentPhoto =
+    //         (
+    //             index +
+    //             galleryPhotos.length
+    //         ) %
+    //         galleryPhotos.length;
 
-        currentPhoto =
-            (
-                index +
-                galleryPhotos.length
-            ) %
-            galleryPhotos.length;
 
+    //     lightboxImage.src =
+    //         galleryPhotos[
+    //             currentPhoto
+    //         ];
 
-        lightboxImage.src =
-            galleryPhotos[
-                currentPhoto
-            ];
 
+    //     lightbox.classList.add(
+    //         "open"
+    //     );
 
-        lightbox.classList.add(
-            "open"
-        );
+    //     document.body.classList.add(
+    //         "lightbox-open"
+    //     );
 
-        document.body.classList.add(
-            "lightbox-open"
-        );
+    // }
 
-    }
 
+    // function closeLightbox() {
 
-    function closeLightbox() {
+    //     if (!lightbox) return;
 
-        if (!lightbox) return;
+    //     lightbox.classList.remove(
+    //         "open"
+    //     );
 
-        lightbox.classList.remove(
-            "open"
-        );
+    //     document.body.classList.remove(
+    //         "lightbox-open"
+    //     );
 
-        document.body.classList.remove(
-            "lightbox-open"
-        );
+    // }
 
-    }
 
+    // function changePhoto(index) {
 
-    function changePhoto(index) {
+    //     if (
+    //         !lightboxImage ||
+    //         !galleryPhotos.length
+    //     ) return;
 
-        if (
-            !lightboxImage ||
-            !galleryPhotos.length
-        ) return;
 
+    //     currentPhoto =
+    //         (
+    //             index +
+    //             galleryPhotos.length
+    //         ) %
+    //         galleryPhotos.length;
 
-        currentPhoto =
-            (
-                index +
-                galleryPhotos.length
-            ) %
-            galleryPhotos.length;
 
+    //     lightboxImage.src =
+    //         galleryPhotos[
+    //             currentPhoto
+    //         ];
 
-        lightboxImage.src =
-            galleryPhotos[
-                currentPhoto
-            ];
+    // }
 
-    }
 
+    // galleryItems.forEach(
+    //     (item, index) => {
 
-    galleryItems.forEach(
-        (item, index) => {
+    //         item.addEventListener(
+    //             "click",
+    //             () => {
 
-            item.addEventListener(
-                "click",
-                () => {
+    //                 openLightbox(
+    //                     index
+    //                 );
 
-                    openLightbox(
-                        index
-                    );
+    //             }
+    //         );
 
-                }
-            );
+    //     }
+    // );
 
-        }
-    );
 
+    // if (lightboxClose) {
 
-    if (lightboxClose) {
+    //     lightboxClose.addEventListener(
+    //         "click",
+    //         closeLightbox
+    //     );
 
-        lightboxClose.addEventListener(
-            "click",
-            closeLightbox
-        );
+    // }
 
-    }
 
+    // if (lightboxPrev) {
 
-    if (lightboxPrev) {
+    //     lightboxPrev.addEventListener(
+    //         "click",
+    //         () => {
 
-        lightboxPrev.addEventListener(
-            "click",
-            () => {
+    //             changePhoto(
+    //                 currentPhoto - 1
+    //             );
 
-                changePhoto(
-                    currentPhoto - 1
-                );
+    //         }
+    //     );
 
-            }
-        );
+    // }
 
-    }
 
+    // if (lightboxNext) {
 
-    if (lightboxNext) {
+    //     lightboxNext.addEventListener(
+    //         "click",
+    //         () => {
 
-        lightboxNext.addEventListener(
-            "click",
-            () => {
+    //             changePhoto(
+    //                 currentPhoto + 1
+    //             );
 
-                changePhoto(
-                    currentPhoto + 1
-                );
+    //         }
+    //     );
 
-            }
-        );
+    // }
 
-    }
 
+    // if (lightbox) {
 
-    if (lightbox) {
+    //     lightbox.addEventListener(
+    //         "click",
+    //         (event) => {
 
-        lightbox.addEventListener(
-            "click",
-            (event) => {
+    //             if (
+    //                 event.target ===
+    //                 lightbox
+    //             ) {
 
-                if (
-                    event.target ===
-                    lightbox
-                ) {
+    //                 closeLightbox();
 
-                    closeLightbox();
+    //             }
 
-                }
+    //         }
+    //     );
 
-            }
-        );
+    // }
 
-    }
 
+    // document.addEventListener(
+    //     "keydown",
+    //     (event) => {
 
-    document.addEventListener(
-        "keydown",
-        (event) => {
+    //         if (
+    //             !lightbox ||
+    //             !lightbox.classList.contains(
+    //                 "open"
+    //             )
+    //         ) {
+    //             return;
+    //         }
 
-            if (
-                !lightbox ||
-                !lightbox.classList.contains(
-                    "open"
-                )
-            ) {
-                return;
-            }
 
+    //         if (
+    //             event.key ===
+    //             "ArrowRight"
+    //         ) {
 
-            if (
-                event.key ===
-                "ArrowRight"
-            ) {
+    //             changePhoto(
+    //                 currentPhoto + 1
+    //             );
 
-                changePhoto(
-                    currentPhoto + 1
-                );
+    //         }
 
-            }
 
+    //         if (
+    //             event.key ===
+    //             "ArrowLeft"
+    //         ) {
 
-            if (
-                event.key ===
-                "ArrowLeft"
-            ) {
+    //             changePhoto(
+    //                 currentPhoto - 1
+    //             );
 
-                changePhoto(
-                    currentPhoto - 1
-                );
+    //         }
 
-            }
-
-        }
-    );
+    //     }
+    // );
 
 
     /* =====================================================
