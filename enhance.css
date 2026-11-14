@@ -156,13 +156,26 @@ body.menu-open .menu-button span:last-child{transform:translateY(-3.5px) rotate(
 }
 
 .nanihaal-greeting {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 10px);
+    z-index: 10;
+
     font-family: 'Italianno', cursive;
     font-size: 30px;
     color: #dfb743;
     text-align: center;
-    margin: 0 0 12px;
+    margin: 0;
     letter-spacing: 1px;
     text-shadow: 0 0 12px rgba(223,183,67,0.3);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+/* Move TAP THE SEAL below the greeting */
+.intro-hint {
+    top: calc(100% + clamp(65px, 10svh, 85px));
 }
 
 @media (max-width: 600px) {
