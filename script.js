@@ -1282,7 +1282,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const weddingDate =
         new Date(
-            "2026-12-04T20:30:00+05:30"
+            "2026-12-04T00:00:00+05:30"
         );
 
 
