@@ -154,3 +154,19 @@ body.menu-open .menu-button span:last-child{transform:translateY(-3.5px) rotate(
     }
 
 }
+
+.nanihaal-greeting {
+    font-family: 'Italianno', cursive;
+    font-size: 30px;
+    color: #dfb743;
+    text-align: center;
+    margin: 0 0 12px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 12px rgba(223,183,67,0.3);
+}
+
+@media (max-width: 600px) {
+    .nanihaal-greeting {
+        font-size: 26px;
+    }
+}
