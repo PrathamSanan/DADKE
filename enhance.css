@@ -74,3 +74,83 @@ body.menu-open .menu-button span:last-child{transform:translateY(-3.5px) rotate(
   .marquee-track,.gold-button::after,.hero-content::before,.discover i,.ornament,.story-star,.event-symbol,.family-divider,.couple-symbol b,.count-box::before,.hero-sparkles span{animation:none!important}
   .hero-sparkles{display:none}
 }
+
+/* =====================================
+   HERO SCROLL DOWN ARROW
+===================================== */
+
+.discover {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50px;
+    height: 38px;
+
+    margin: 12px auto 8px;
+
+    text-decoration: none;
+    color: #dfb743;
+
+    z-index: 10;
+}
+
+/* Animated golden arrow */
+
+.scroll-arrow {
+    display: block;
+
+    font-family: Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 300;
+    line-height: 1;
+
+    color: #dfb743;
+
+    text-shadow:
+        0 0 8px rgba(223,183,67,.5),
+        0 0 18px rgba(223,183,67,.2);
+
+    animation: scrollArrowBounce 1.5s ease-in-out infinite;
+}
+
+/* Downward movement */
+
+@keyframes scrollArrowBounce {
+
+    0%, 100% {
+        transform: translateY(-5px);
+        opacity: .65;
+    }
+
+    50% {
+        transform: translateY(9px);
+        opacity: 1;
+    }
+
+}
+
+/* Hover effect */
+
+.discover:hover .scroll-arrow {
+    color: #fff0bd;
+}
+
+/* Mobile adjustment */
+
+@media (max-width: 768px) {
+
+    .discover {
+        margin: 8px auto 5px;
+    }
+
+    .scroll-arrow {
+        font-size: 36px;
+    }
+
+}
