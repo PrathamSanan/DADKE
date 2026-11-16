@@ -1862,7 +1862,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 window.open(
 
-                    "https://wa.me/917206367728?text=" +
+                    "https://wa.me/919416367229?text=" +
                     encodeURIComponent(
                         message
                     ),
