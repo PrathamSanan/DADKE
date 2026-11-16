@@ -183,3 +183,24 @@ body.menu-open .menu-button span:last-child{transform:translateY(-3.5px) rotate(
         font-size: 26px;
     }
 }
+
+/* SCROLL DOWN TEXT */
+
+.scroll-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: auto;
+    gap: 5px;
+}
+
+.scroll-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #dfb743;
+    white-space: nowrap;
+    opacity: 0.85;
+}
