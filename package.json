@@ -1,0 +1,15 @@
+{
+  "name": "akshitawedsvishal",
+  "version": "1.0.0",
+  "description": "The royal wedding celebration of Akshita & Vishal",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  },
+  "keywords": ["wedding", "invitation"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.0"
+  }
+}
